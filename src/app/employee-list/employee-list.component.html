@@ -6,18 +6,6 @@
     <!-- <ion-title>
       Home
     </ion-title> -->
-    <ion-buttons slot="end">
-      <ion-button color="primary" *ngIf="!requestToken"
-        (click)="requestPushNotificationsPermission()">
-        Enable Notifications
-      </ion-button>
-      <ion-button color="success" *ngIf="requestToken">
-        Token Generated
-      </ion-button>
-      <ion-button color="success" (click)="getCurrentPosition()">
-        ALLOW LOCATION
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

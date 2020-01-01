@@ -20,11 +20,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
-import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   entryComponents: [],
   imports: [
@@ -43,7 +43,7 @@ import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
     StatusBar,
     SplashScreen,
     AngularFirestore,
-    { provide: [RouteReuseStrategy, StorageBucket], useClass: IonicRouteStrategy },
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthService
   ],
   bootstrap: [AppComponent]

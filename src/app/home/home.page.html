@@ -42,11 +42,11 @@
   </ion-card>
 
   <ion-card padding>
-    <p>{{ observableNumber | async }}</p>
+    <p>{{ observableNumber$ | async }}</p>
     <p>Latest: {{ latestValue }}</p>
     <input type="file" (change)="upload($event)" accept=".png,.jpg" />
     <progress max="100" [value]="(uploadProgress | async)"></progress>
-    <div class="result" *ngIf="uploadURL | async; let uploadSrc">
+    <div class="result" *ngIf="downloadURL | async; let uploadSrc">
       <a [href]="uploadSrc">You just uploaded this file!</a>
     </div>
     <section class="control-bar" *ngIf="uploadState | async; let state">
