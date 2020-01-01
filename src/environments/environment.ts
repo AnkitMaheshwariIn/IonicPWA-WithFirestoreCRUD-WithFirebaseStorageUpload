@@ -5,13 +5,12 @@
 export const environment = {
   production: false,
   firebase : {
-    apiKey: 'AIzaSyCcNfs06ONZeiy_WOW1F1_Bi7MCUMlaRiQ',
-    authDomain: 'pwachitchat.firebaseapp.com',
-    databaseURL: 'https://pwachitchat.firebaseio.com',
-    projectId: 'pwachitchat',
-    storageBucket: 'pwachitchat.appspot.com',
-    messagingSenderId: '134737038795',
-    appId: '1:134737038795:web:c6932b5354ae696ad43a4e'
+    apiKey: 'YOUR_API_KEY',
+    authDomain: 'YOUR_AUTH_DOMAIN',
+    databaseURL: 'YOUR_DATABASE_URL',
+    projectId: 'YOUR_PROJECT_ID',
+    storageBucket: 'YOUR_STORAGE_BUCKET',
+    messagingSenderId: 'YOUR_SENDER_ID'
   }
 };
 
