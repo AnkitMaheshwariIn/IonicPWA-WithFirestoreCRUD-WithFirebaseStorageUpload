@@ -1,7 +1,7 @@
 # Ionic PWA (Angular) | with Firestore CRUD | with Firebase Storage Upload.
-* Progressive Web App Demo - built using Ionic PWA and Angular. *
+## Progressive Web App Demo - built using Ionic PWA and Angular.
 
-* This application (GitHub code) is a Demo version of following tutorials: *
+## This application (GitHub code) is a Demo version of following tutorials:
 
 #1 How to build PWAs (Progressive Web Apps) using Angular, Ionic4/Ionic Framework and Firebase Hosting.
 Link to tutorial:
@@ -32,9 +32,9 @@ Link to tutorial:
 https://www.codewithchintan.com/angular-async-pipe/
 
 
-* CHECK DEMO (Hosting URL): https://pwachitchat.firebaseapp.com *
+## CHECK DEMO (Hosting URL): https://pwachitchat.firebaseapp.com
 
-* DO NOT FORGET to replace Firebase Configuration with yours in your environment.ts files: *
+## DO NOT FORGET to replace Firebase Configuration with yours in your environment.ts files:
 (for local👇)
 YOUR-PROJECT-DIRECTORY/src/environments/environment.ts
 (for production👇)
