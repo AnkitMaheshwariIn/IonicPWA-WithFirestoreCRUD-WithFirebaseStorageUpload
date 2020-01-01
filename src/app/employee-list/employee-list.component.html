@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>
+      Home
+    </ion-title> -->
+    <ion-buttons slot="end">
+      <ion-button color="primary" *ngIf="!requestToken"
+        (click)="requestPushNotificationsPermission()">
+        Enable Notifications
+      </ion-button>
+      <ion-button color="success" *ngIf="requestToken">
+        Token Generated
+      </ion-button>
+      <ion-button color="success" (click)="getCurrentPosition()">
+        ALLOW LOCATION
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>
+    New Employee!
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" [(ngModel)]="employee.name" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>
+          <input type="number" [(ngModel)]="employee.phone" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Designation</td>
+        <td>
+          <input type="text" [(ngModel)]="employee.designation" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Salary</td>
+        <td>
+          <input type="number" [(ngModel)]="employee.salary" required>
+        </td>
+      </tr>
+      <tr>
+        <td>JoinDate</td>
+        <td>
+          <input type="date" [(ngModel)]="employee.joinDate" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          <input type="text" [(ngModel)]="employee.address" required>
+        </td>
+      </tr>
+      <tr>
+        <td>ExtraInfo</td>
+        <td>
+          <input type="text" [(ngModel)]="employee.extraInfo" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Add</td>
+        <td>
+          <ion-button *ngIf="!toggleUpdateBtn" (click)="addEmployee(employee)">Submit</ion-button>
+          <ion-button *ngIf="toggleUpdateBtn" (click)="updateEmployee(employee)">update</ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Employee List Works!
+  </p>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Designation</th>
+      <th>Salary</th>
+      <th>JoinDate</th>
+      <th>Address</th>
+      <th>ExtraInfo</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.designation }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>{{ employee.joinDate }}</td>
+        <td>{{ employee.address }}</td>
+        <td>{{ employee.extraInfo }}</td>
+        <td>
+          <ion-button (click)="updateFunc(employee)">Update</ion-button>
+        </td>
+        <td>
+          <ion-button (click)="deleteEmployee(employee.id)">Delete</ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>

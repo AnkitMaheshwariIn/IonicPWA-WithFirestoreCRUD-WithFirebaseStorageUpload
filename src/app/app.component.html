@@ -1,5 +1,32 @@
+<!-- 
+  file-name: app.component.html
+  The important code for logging-in, signing-up or logging-out are from line no. 06 to 27 — rest you can manage yourself based on user is logging-in or logging-out | you can any time check user loggin status using *ngIf="!(authService.user | async)"
+-->
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-content padding>
+    <h1 *ngIf="authService.user | async">
+      Welcome {{ (authService.user | async)?.email }}!
+    </h1>
+
+    <div *ngIf="!(authService.user | async)">
+      <ion-input type="text" [(ngModel)]="email" placeholder="Enter email"></ion-input>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Enter password"></ion-input>
+
+      <ion-button (click)="signup()" [disabled]="!email || !password">
+        Signup
+      </ion-button>
+
+      <ion-button (click)="login()" [disabled]="!email || !password">
+        Login
+      </ion-button>
+    </div>
+
+    <ion-button (click)="logout()" *ngIf="authService.user | async">
+      Logout
+    </ion-button>
+  </ion-content>
+
+  <ion-split-pane contentId="main-content" *ngIf="authService.user | async">
     <ion-menu contentId="main-content" type="overlay">
       <ion-header>
         <ion-toolbar>
