@@ -32,11 +32,15 @@ export class HomePage implements OnInit, OnDestroy {
   // declare unsubscribe$
   unsubscribe$: Subject<void> = new Subject<void>();
 
-  constructor(
-    private afMessaging: AngularFireMessaging,
-    private afStorage: AngularFireStorage) {}
+  private afMessaging: AngularFireMessaging;
+  private afStorage: AngularFireStorage;
+
+  constructor() {
+    console.log('home page constructor');
+  }
 
   ngOnInit() {
+    console.log('home page ngOnInit');
     // create an Observable
     this.observableNumber$ = Observable.create(observer => {
       // initialize value of temp variable 'val' with 0

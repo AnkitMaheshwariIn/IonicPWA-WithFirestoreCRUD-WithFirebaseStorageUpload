@@ -15,6 +15,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthService } from './service/auth.service';
+import { HomePage } from './home/home.page';
 
 @Component({
   selector: 'app-root',
@@ -45,6 +46,9 @@ export class AppComponent {
     public authService: AuthService
   ) {
     this.initializeApp();
+    let a = new HomePage();
+    let b = new HomePage();
+    let c = new HomePage();
   }
 
   initializeApp() {

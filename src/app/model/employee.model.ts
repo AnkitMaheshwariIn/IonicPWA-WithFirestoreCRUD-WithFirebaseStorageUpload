@@ -5,6 +5,8 @@ export class Employee {
     designation: string;
     salary: number;
     joinDate: Date;
+    joinDateTimestamp: Date;
     address: string;
     extraInfo: string;
+    lastUpdated: Date;
 }

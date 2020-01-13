@@ -11,7 +11,8 @@
 
 <ion-content padding>
   <p>
-    New Employee!
+    Add New Employee OR Search Employee.<br>
+    <span style="color:gray;">(We'll use Firebase Query to get Search results)</span>
   </p>
   <table>
     <tbody>
@@ -60,13 +61,23 @@
       <tr>
         <td>Add</td>
         <td>
+          <!-- submit button (to create new employee) -->
           <ion-button *ngIf="!toggleUpdateBtn" (click)="addEmployee(employee)">Submit</ion-button>
+          <!-- update button (to update existing employee) -->
           <ion-button *ngIf="toggleUpdateBtn" (click)="updateEmployee(employee)">update</ion-button>
+
+          <!-- search button (find employee based on given info) -->
+          <ion-button *ngIf="toggleSearchBtn" (click)="searchEmployee(employee)">Search</ion-button>
+          <!-- clear search button (clear search result and display all employee)
+              by calling clearSearch() -->
+          <ion-button *ngIf="!toggleSearchBtn" (click)="clearSearch()">Clear Search</ion-button>
         </td>
       </tr>
     </tbody>
   </table>
 
+  <p style="border-top: 1px solid gray;"></p>
+  
   <p>
     Employee List Works!
   </p>
@@ -92,7 +103,7 @@
         <td>{{ employee.address }}</td>
         <td>{{ employee.extraInfo }}</td>
         <td>
-          <ion-button (click)="updateFunc(employee)">Update</ion-button>
+          <ion-button (click)="editFunc(employee)">Edit</ion-button>
         </td>
         <td>
           <ion-button (click)="deleteEmployee(employee.id)">Delete</ion-button>

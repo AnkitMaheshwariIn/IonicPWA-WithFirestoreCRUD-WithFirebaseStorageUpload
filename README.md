@@ -1,4 +1,4 @@
-# Ionic PWA (Angular) | with Firestore CRUD | with Firebase Storage Upload.
+# Ionic PWA (Angular) | with Firestore CRUD & Advance where Queries | with Firebase Storage Upload.
 ### (Progressive Web App Demo - built using Ionic PWA and Angular.)
 
 ## This application (GitHub code) is a Demo version of following tutorials:
